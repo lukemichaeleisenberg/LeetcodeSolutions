@@ -1,2 +1,4 @@
 # LeetcodeSolutions
-My Leetcode solutions
+My Leetcode solutions! 
+
+Synced using https://github.com/joshcai/leetcode-sync.
