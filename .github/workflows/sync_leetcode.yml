@@ -2,7 +2,11 @@ name: Sync Leetcode
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 22 * * *"
+    # GitHub cron is UTC only, so these are pinned to Pacific Daylight Time
+    # (UTC-7). During Standard Time they land an hour earlier in local terms:
+    # 07:00 and 18:00 PST.
+    - cron: "0 15 * * *"  # 08:00 PDT
+    - cron: "0 2 * * *"   # 19:00 PDT (previous day in UTC)
 jobs:
   sync:
     runs-on: ubuntu-latest
